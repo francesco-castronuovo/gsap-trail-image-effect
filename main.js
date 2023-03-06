@@ -1,6 +1,3 @@
-import * from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
-import * from "https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"
-
 /********* Utility *********/
 
 const MathUtils = {
