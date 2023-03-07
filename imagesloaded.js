@@ -149,7 +149,7 @@ function makeArray( obj ) {
  * @param {Function} onAlways - callback function
  * @returns {ImagesLoaded}
  */
-function ImagesLoaded( elem, options, onAlways ) {
+export function ImagesLoaded( elem, options, onAlways ) {
   // coerce ImagesLoaded() without new, to be new ImagesLoaded()
   if ( !( this instanceof ImagesLoaded ) ) {
     return new ImagesLoaded( elem, options, onAlways );
