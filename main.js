@@ -1,3 +1,5 @@
+import { imagesLoaded } from './imagesloaded.js';
+
 /********* Utility *********/
 
 const MathUtils = {
