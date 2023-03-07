@@ -643,6 +643,8 @@ for(let i = 0; i < components.length; i++)
   // A list of all the images inside the current component
   const list = components[i].querySelector('[fc-trail-image = list]')
   
+  const images = list.querySelectorAll('img')
+  
   // Mouse distance required to show the next image
   const mouseThreshold = parseInt(components[i].getAttribute('fc-trail-image-threshold'))
   
@@ -707,7 +709,7 @@ for(let i = 0; i < components.length; i++)
   })
 
   // Loads all the images for the current component and then instatiates the corresponding image trail object
-  imagesLoaded(list.querySelectorAll('img'), function(instance) {
+  imagesLoaded(images, function(instance) {
     console.log('all images are loaded')
     imageTrails.push(new ImageTrail(list, mouseThreshold, opacityFrom, scaleFrom, opacityTo, scaleTo, mainDuration, mainEase,
     fadeOutDuration, fadeOutDelay, fadeOutEase, resetIndex, resetIndexDelay))
