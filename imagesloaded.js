@@ -149,7 +149,7 @@ function makeArray( obj ) {
  * @param {Function} onAlways - callback function
  * @returns {ImagesLoaded}
  */
-export function ImagesLoaded( elem, options, onAlways ) {
+function ImagesLoaded( elem, options, onAlways ) {
   // coerce ImagesLoaded() without new, to be new ImagesLoaded()
   if ( !( this instanceof ImagesLoaded ) ) {
     return new ImagesLoaded( elem, options, onAlways );
@@ -164,6 +164,8 @@ export function ImagesLoaded( elem, options, onAlways ) {
     console.error(`Bad element for imagesLoaded ${queryElem || elem}`);
     return;
   }
+  
+  export { ImagesLoaded };
 
   this.elements = makeArray( queryElem );
   this.options = {};
