@@ -637,6 +637,12 @@ const components = document.querySelectorAll('[fc-trail-image = component]')
 // An array to store all the image trail objects that will be instanced
 let imageTrails = []
 
+var Webflow = Webflow || [];
+  Webflow.push(function () {
+    // DOMready has fired
+    // May now use jQuery and Webflow api
+  
+
 // Loops through all the components to generate the corresponding image trail object
 for(let i = 0; i < components.length; i++)
 {
@@ -707,7 +713,7 @@ for(let i = 0; i < components.length; i++)
   components[i].addEventListener("mouseleave", function(e) { 
     imageTrails[i].stopAnimationFrame = true
   })
-
+  
   // Loads all the images for the current component and then instatiates the corresponding image trail object
   imagesLoaded(images, function(instance) {
     console.log('all images are loaded')
@@ -715,3 +721,4 @@ for(let i = 0; i < components.length; i++)
     fadeOutDuration, fadeOutDelay, fadeOutEase, resetIndex, resetIndexDelay))
   });
 }
+    });
