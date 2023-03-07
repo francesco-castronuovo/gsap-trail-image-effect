@@ -164,8 +164,6 @@ function ImagesLoaded( elem, options, onAlways ) {
     console.error(`Bad element for imagesLoaded ${queryElem || elem}`);
     return;
   }
-  
-  export { ImagesLoaded };
 
   this.elements = makeArray( queryElem );
   this.options = {};
@@ -441,3 +439,5 @@ ImagesLoaded.makeJQueryPlugin();
 return ImagesLoaded;
 
 } );
+
+export { ImagesLoaded };
