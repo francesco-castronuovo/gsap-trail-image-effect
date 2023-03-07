@@ -438,6 +438,8 @@ ImagesLoaded.makeJQueryPlugin();
 
 return ImagesLoaded;
 
-} );
+}
 
 export { ImagesLoaded };
+    
+);
