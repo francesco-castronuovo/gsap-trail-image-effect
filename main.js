@@ -69,7 +69,7 @@ class ImageTrail {
     // zIndex value to apply to the upcoming image
     this.zIndexVal = 1;
     // Mouse distance required to show the next image
-    this.threshold = mouseThreshold;
+    this.threshold = isNaN(mouseThreshold) ? 100 : mouseThreshold 
     // Number of frames rendered (used if the reset index parameter is set to true)
     this.frameCount = 0;
     // If set to true, it resets the image trail index everytime the cursor enters the component
@@ -77,21 +77,21 @@ class ImageTrail {
     // The number of frames after which the image trail index is resetted if the reset index parameter is set to true
     this.resetIndexDelay = isNaN(resetIndexDelay) ? 200 : resetIndexDelay
     // The initial opacity value for each image in the trail
-    this.opacityFrom = isNaN(opacityFrom) ? 0.5 : opacityFrom
+    this.opacityFrom = isNaN(opacityFrom) ? 0.6 : opacityFrom
     // The initial scale value for each image in the trail
-    this.scaleFrom = isNaN(scaleFrom) ? 0.5 : scaleFrom
+    this.scaleFrom = isNaN(scaleFrom) ? 0.8 : scaleFrom
     // The opacity value each image is animated to
     this.opacityTo = isNaN(opacityTo) ? 1 : opacityTo
     // The scale value each image is animated to
     this.scaleTo = isNaN(scaleTo) ? 1 : scaleTo
     // The duration of the first part of the animation
-    this.mainDuration = isNaN(mainDuration) ? 0.5 : mainDuration
+    this.mainDuration = isNaN(mainDuration) ? 0.7 : mainDuration
     // The easing function for the first part of the animation
     this.mainEase = mainEase === null ? 'power3' : mainEase
     // The duration of the fade-out part of the animation
-    this.fadeOutDuration = isNaN(fadeOutDuration) ? 0.5 : fadeOutDuration
+    this.fadeOutDuration = isNaN(fadeOutDuration) ? 1 : fadeOutDuration
     // The amount of time to wait before the fade-out part of the animation
-    this.fadeOutDelay = isNaN(fadeOutDelay) ? 0.5 : fadeOutDelay
+    this.fadeOutDelay = isNaN(fadeOutDelay) ? 0.3 : fadeOutDelay
     // The easing function for the fade-out animation
     this.fadeOutEase = fadeOutEase === null ? 'power3' : fadeOutEase
     // Store mouse positions relative to the component the trail image is in
