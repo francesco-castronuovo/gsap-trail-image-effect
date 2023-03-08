@@ -1,0 +1,6 @@
+[fc-trail-image=list] img {
+	opacity: 0;
+  position: absolute;
+	will-change: transform;
+  pointer-events: none;
+}
