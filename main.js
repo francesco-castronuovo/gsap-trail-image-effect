@@ -714,11 +714,13 @@ for(let i = 0; i < components.length; i++)
     imageTrails[i].stopAnimationFrame = true
   })
   
-  // Loads all the images for the current component and then instatiates the corresponding image trail object
-  imagesLoaded(images, function(instance) {
-    console.log('all images are loaded')
-    imageTrails.push(new ImageTrail(list, mouseThreshold, opacityFrom, scaleFrom, opacityTo, scaleTo, mainDuration, mainEase,
+  imageTrails.push(new ImageTrail(list, mouseThreshold, opacityFrom, scaleFrom, opacityTo, scaleTo, mainDuration, mainEase,
     fadeOutDuration, fadeOutDelay, fadeOutEase, resetIndex, resetIndexDelay))
-  });
+  
+  // Loads all the images for the current component and then instatiates the corresponding image trail object
+  /*imagesLoaded(images, function(instance) {
+    console.log('all images are loaded')
+    
+  });*/
 }
     });
